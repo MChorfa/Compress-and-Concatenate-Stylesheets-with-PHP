@@ -23,6 +23,6 @@ array_walk($css, function( &$val ) {
 
 file_put_contents(
    'css/min/all_min.css', 
-   file_get_contents("http://demo.jeffrey-way.com/css_compress/api.php?css=" . urlencode(implode($css)))
+   file_get_contents("http://compresscss.com/api.php?css=" . urlencode(implode($css)))
 );
 */
