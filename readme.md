@@ -42,7 +42,7 @@ $C->save();
 
 <pre>
 require 'CSS_Compress.php';
-$C = new CSS_Compress( style.css');
+$C = new CSS_Compress( 'style.css');
 $C->save();
 </pre>
 ...compressed stylesheet is saved to style_min.css
@@ -51,7 +51,7 @@ $C->save();
 
 <pre>
 require 'CSS_Compress.php';
-$C = new CSS_Compress( style.css', 'styles.css );
+$C = new CSS_Compress( 'style.css', 'styles.css' );
 $C->save();
 </pre>
 
@@ -59,7 +59,7 @@ $C->save();
 
 <pre>
 require 'CSS_Compress.php';
-$C = new CSS_Compress( array('css/style.css', 'css/style2.css', 'css/style3.css'), 'css/min/styles_min.css );
+$C = new CSS_Compress( array('css/style.css', 'css/style2.css', 'css/style3.css'), 'css/min/styles_min.css' );
 $C->save();
 </pre>
 
@@ -98,3 +98,13 @@ file_put_contents(
    file_get_contents("http://compresscss.com/api.php?file_names=http://net.tutsplus.com/wp-content/themes/tuts/css/large.css,http://envato.s3.amazonaws.com/widget/widget.css")
 );
 </pre>
+
+
+
+
+
+
+
+
+
+
