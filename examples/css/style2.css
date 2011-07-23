@@ -1,0 +1,10 @@
+#container2 {
+   font-variant: small-caps;
+   font-weight: bold;
+   text-align: left;
+   white-space: nowrap;
+   text-shadow: 0 0 1px #cf1e1e;
+   -moz-box-shadow: 0 0 1px #737373;
+   -webkit-box-shadow: 0 0 1px #737373;
+   box-shadow: 0 0 1px #737373;
+}
