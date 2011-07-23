@@ -63,3 +63,35 @@ $C = new CSS_Compress( array('css/style.css', 'css/style2.css', 'css/style3.css'
 $C->save();
 </pre>
 
+## There's Also An API...
+
+If you don't want to use these files locally, you can also pass your stylesheets to compresscss.com, which will do the work for you, and return the concatenated + compressed CSS. With this method, you don't need to download any files. Just open a blank PHP file, and paste in...
+
+## Compress Style.css, and Save it as all_min.css. 
+<pre>
+file_put_contents(
+  'all_min.css',
+  file_get_contents('http://compresscss.com/api.php?css=' . urlencode(file_get_contents('examples/css/style.css')))
+);
+</pre>
+Note that, if you're saving to a directory that does not exist, and you're using the API method, you'll need to create the directory first. 
+
+## Compress + Concatenate Multiple Files
+
+<pre>
+$css = array('examples/css/style.css', 'examples/css/style2.css');
+array_walk($css, function( &$val ) {
+   $val = file_get_contents( $val );
+});
+
+file_put_contents(
+   'all_min.css', 
+   file_get_contents("http://compresscss.com/api.php?css=" . urlencode(implode($css)))
+);
+</pre>
+
+## Compress Externally Hosted Stylesheets, Concatenate Them, and Save Locally to style_min.css
+file_put_contents(
+   'style_min.css', 
+   file_get_contents("http://compresscss.com/api.php?file_names=http://net.tutsplus.com/wp-content/themes/tuts/css/large.css,http://envato.s3.amazonaws.com/widget/widget.css")
+);

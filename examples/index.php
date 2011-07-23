@@ -4,11 +4,11 @@
 /* 
  Usage 1 
 */
-//
-//require 'CSS_Compress.php';
+
+require '../CSS_Compress.php';
 //$C = new CSS_Compress('css/style.css');
-//$C = new CSS_Compress(array('css/style.css', 'css/style2.css'), 'css/min/style_min.css');
-//$C->save();
+$C = new CSS_Compress(array('css/style.css', 'css/style2.css'), 'css/min/style_min.css');
+$C->save();
 
 
 /* 

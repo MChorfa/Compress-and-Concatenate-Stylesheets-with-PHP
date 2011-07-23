@@ -10,7 +10,7 @@ http://localhost:8888/css_compress/api.php?paths=css/style.css&save_as=test.css
 require 'CSS_Compress.php';
 
 if ( isset($_GET['file_names']) ) {
-   $file_names = explode( ',', $_GET['file_names'] );   
+   $file_names = explode( ',', $_GET['file_names'] );  
    $C = new CSS_Compress( $file_names, 'style_min.css' );
    
    if ( isset($_GET['save_as']) ) {
