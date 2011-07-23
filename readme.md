@@ -91,7 +91,10 @@ file_put_contents(
 </pre>
 
 ## Compress Externally Hosted Stylesheets, Concatenate Them, and Save Locally to style_min.css
+
+<pre>
 file_put_contents(
    'style_min.css', 
    file_get_contents("http://compresscss.com/api.php?file_names=http://net.tutsplus.com/wp-content/themes/tuts/css/large.css,http://envato.s3.amazonaws.com/widget/widget.css")
 );
+</pre>
