@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>groupInfo</key>
+	<dict>
+		<key>expandAfterMode</key>
+		<integer>0</integer>
+		<key>groupName</key>
+		<string>CompressCSS</string>
+	</dict>
+	<key>snippetsTE2</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string></string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-07-23T21:00:08Z</date>
+			<key>flags</key>
+			<integer>0</integer>
+			<key>label</key>
+			<string>Compress Multiple Stylesheets Locally</string>
+			<key>lastUsed</key>
+			<date>2011-07-23T21:02:54Z</date>
+			<key>modificationDate</key>
+			<date>2011-07-23T21:01:58Z</date>
+			<key>plainText</key>
+			<string>require 'CSS_Compress.php';
+$C = new CSS_Compress( array('%fill:stylesheet_1%', '%fill:stylesheet_2%'), '%fill:save_as%' );
+$C-&gt;save();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>useCount</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>3C0CECDE-DDE7-4F29-9B9F-AC47E5FFDF5F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string></string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-07-23T20:59:49Z</date>
+			<key>flags</key>
+			<integer>0</integer>
+			<key>label</key>
+			<string>Compress Stylesheet Locally</string>
+			<key>modificationDate</key>
+			<date>2011-07-23T21:00:51Z</date>
+			<key>plainText</key>
+			<string>require 'CSS_Compress.php';
+$C = new CSS_Compress('%fill:stylesheet_path%', %save_as);
+$C-&gt;save();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>useCount</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>61F2D3E8-3867-409B-A3E0-5ED453BF3462</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string></string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-07-23T20:58:00Z</date>
+			<key>flags</key>
+			<integer>0</integer>
+			<key>label</key>
+			<string>Compress Multiple Stylesheets with PHP</string>
+			<key>lastUsed</key>
+			<date>2011-07-23T20:59:29Z</date>
+			<key>modificationDate</key>
+			<date>2011-07-23T20:58:00Z</date>
+			<key>plainText</key>
+			<string>file_put_contents(
+   %fill:save_as%, 
+   file_get_contents("http://compresscss.com/api.php?file_names=%fill:stylesheet_1%,%fill:stylesheet_2%")
+);</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>useCount</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>7B841116-5052-4F57-83EB-ADCBB5386350</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string></string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-07-23T20:56:24Z</date>
+			<key>flags</key>
+			<integer>0</integer>
+			<key>label</key>
+			<string>Compress Single Stylesheet with PHP</string>
+			<key>lastUsed</key>
+			<date>2011-07-23T20:57:44Z</date>
+			<key>modificationDate</key>
+			<date>2011-07-23T20:57:20Z</date>
+			<key>plainText</key>
+			<string>file_put_contents(
+  'all_min.css',
+  file_get_contents('http://compresscss.com/api.php?css=' . urlencode(file_get_contents('%fill:path_to_stylesheet%')))
+);</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>useCount</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>BE5E2636-0208-4586-BEF6-8C8FCC68EBF5</string>
+		</dict>
+	</array>
+</dict>
+</plist>
