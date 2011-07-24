@@ -64,9 +64,9 @@ class CSS_Compress {
     {
         // if direct css was added
         if (false !== strstr($file, '{') ) {
-            return preg_replace('/\/\*.+?\*\/|\s+|;(?=\s})/s', '', $file );
+            return preg_replace('/(?<=[;\s}])\s|\s(?={\s)|[\r\n]|\/\*.+?\*\//ms', '', $file );
         } else {
-            return preg_replace('/\/\*.+?\*\/|\s+|;(?=\s})/s', '', implode(file($file) ) );
+            return preg_replace('/(?<=[;\s}])\s|\s(?={\s)|[\r\n]|\/\*.+?\*\//ms', '', implode(file($file) ) );
         }
     }
     
