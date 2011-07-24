@@ -61,13 +61,9 @@ class CSS_Compress {
     }
     
     public function replace($file)
-    {
-        // if direct css was added
-        if (false !== strstr($file, '{') ) {
-            return preg_replace('/(?<=[;\s}])\s|\s(?={\s)|[\r\n]|\/\*.+?\*\//ms', '', $file );
-        } else {
-            return preg_replace('/(?<=[;\s}])\s|\s(?={\s)|[\r\n]|\/\*.+?\*\//ms', '', implode(file($file) ) );
-        }
+    { 
+       $path = ( false !== strstr($file, '{') ) ? $file : implode( file($file) );
+       return preg_replace('/(?<=[;\s}])\s|(?<=:)\s|\s(?={\s)|[\r\n]|\/\*.+?\*\//ms', '', $path );
     }
     
     protected function create_directories()
